@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>All Posts</title>
+  </head>
+  <body>
+
+    <% if @posts %>
+      <h1>Your Posts!</h1>
+      <% @posts.each do |p| %>
+        <h2><%= p.name %></h2>
+        <a href="/posts/<%=p.id%>/edit">edit</a>
+        <p><%= p.content %></p>
+        <hr>
+      <% end %>
+    <% else %>
+    <h1>No Posts Found</h1>
+    <% end %>
+    <p><a href="/posts/new">Create a new post here!</a></p>
+  </body>
+</html>
