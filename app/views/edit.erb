@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit the post</h1>
+    <form class="" action="/posts/<%= @selected_post_for_edit.id %>" method="post">
+
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <label for="content">Blog content:</label>
+      <input type="text" id="content" name="content" value="<%= @selected_post_for_edit.content %>">
+
+      <label for="name">Blog name:</label>
+      <input type="text" id="name" name="name" value="<%= @selected_post_for_edit.name %>">
+      <input type="submit" value="submit">
+    </form>
+
+    
+  </body>
+</html>
