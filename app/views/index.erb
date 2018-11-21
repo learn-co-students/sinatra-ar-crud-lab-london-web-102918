@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>All Posts</title>
+  </head>
+  <body>
+    <h1>Hello Posts!</h1>
+    <% @posts.each do |p| %>
+    <h2>Post Name:</h2>
+    <%= p.name %>
+    <h2>Post Content:</h2>
+    <%= p.content %>
+    <% end %>
+    <p><a href="/posts/new">Create a new post here!</a></p>
+  </body>
+</html>
