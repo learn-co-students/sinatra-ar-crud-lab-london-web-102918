@@ -61,4 +61,17 @@ class ApplicationController < Sinatra::Base
     redirect "/posts"
     #delete
   end
+
+
+  #made a return route
+  post "/return" do
+    redirect "/posts"
+  end
+
+  #made a re-edit route
+  post "/posts/:id/re_edit" do
+    selected_post_for_re_edit = Post.find(params[:id])
+    redirect "/posts/#{selected_post_for_re_edit.id}/edit"
+  end
+
 end

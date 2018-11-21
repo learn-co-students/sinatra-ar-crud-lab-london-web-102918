@@ -1,6 +1,7 @@
 <h1>Welcome to the index of the site</h1>
 <h1>All the posts</h1>
 <% @posts.each do |post| %>
+<br><%= post.id %>
 <br><%= post.name %>
 <br><%= post.content %><br>
 <% end %>

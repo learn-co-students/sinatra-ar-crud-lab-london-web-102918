@@ -11,5 +11,11 @@
       <input id= "hidden" class="hidden" type="hidden" name="_method" value="delete" />
       <input type="submit" value="delete">
     </form>
+    <form class="" action="/return" method="post">
+      <input type="submit" value="return">
+    </form>
+    <form class="" action="/posts/<%= @selected_post.id %>/re_edit" method="post">
+      <input type="submit" value="re edit">
+    </form>
   </body>
 </html>
